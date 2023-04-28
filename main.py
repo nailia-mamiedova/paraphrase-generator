@@ -37,7 +37,7 @@ def paraphrase():
             for permutation in itertools.permutations(combination):
                 new_tree = tree.copy(deep=True)
                 replace_noun_phrases(new_tree, permutation)
-                paraphrase = str(new_tree).replace('\n', '')  # Remove newline character
+                paraphrase = str(new_tree).replace('\n', '')
                 if paraphrase not in paraphrases:
                     paraphrases.append(paraphrase)
                     if len(paraphrases) == limit:
